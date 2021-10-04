@@ -13,6 +13,8 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function getSumOfDigits(/* n */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  while (n / 10 >= 1) {
+    n = (`${n}`).split('').reduce((v, i) => Number(v) + Number(i), 0);
+  };
+  return n;
 }
