@@ -13,7 +13,7 @@ import { NotImplementedError } from '../extensions/index.js';
  * transform([1, 2, 3, '--discard-prev', 4, 5]) => [1, 2, 4, 5]
  * 
  */
-export default function transform(/* arr */) {
+export default function transform(arr) {
   if (!Array.isArray(arr)) throw Error(`'arr' parameter must be an instance of the Array!`);
   let kom = ['--discard-next', '--discard-prev', '--double-next', '--double-prev'];
   let v = [];
